@@ -1,0 +1,14 @@
+<% x = @author %>
+<%= form_for(x) do |f| %>
+  <% if x.errors.any? %>
+  <div id="error_explanation">
+
+  <!-- <h3><%= pluralize(x.errors.count, "error").titleize + ". Bummer."%></h3> -->
+  <% x.errors.full_messages.each do |e| %>
+        <li> <%= e %> </li>
+        <% end  %>
+      <br>
+
+</div>
+  <% end %>
+<% end  %>
