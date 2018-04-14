@@ -1,0 +1,19 @@
+<h2>Update an <%= @author.title %> </h2>
+<%= form_tag author_path(@author), method: "patch" do %>
+  <div class="field">
+    <%= label_tag "name", @author.name %>
+    <%= text_field_tag @author.name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "email", @author.email %>
+    <%= text_field_tag @author.email %>
+  </div>
+
+  <div class="field">
+    <%= label_tag "phone_number", @author.phone_number %>
+    <%= text_field_tag, @author.phone_number %>
+  </div>
+
+  <%= submit_tag "Update" %>
+<% end %>
